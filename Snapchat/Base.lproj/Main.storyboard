@@ -65,10 +65,19 @@
                                     <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N1Y-H6-yN7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbo-BB-DYq">
+                                <rect key="frame" x="152" y="532" width="110.5" height="54"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pngwing.com-3" title="Google"/>
+                                <connections>
+                                    <action selector="gmailTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoR-4p-EBH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Jbo-BB-DYq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ya-dY-jYa"/>
                             <constraint firstItem="MCV-dq-kNf" firstAttribute="top" secondItem="92L-SK-uAj" secondAttribute="bottom" constant="21.5" id="1kD-uA-Xqv"/>
                             <constraint firstItem="EEG-DG-8xf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8oM-er-ehq"/>
                             <constraint firstItem="3QS-Yy-5NN" firstAttribute="top" secondItem="EEG-DG-8xf" secondAttribute="bottom" constant="25" id="DAb-4A-QZi"/>
@@ -78,6 +87,7 @@
                             <constraint firstItem="6N9-EV-KK6" firstAttribute="top" secondItem="MCV-dq-kNf" secondAttribute="bottom" constant="27" id="XNW-8g-Hrx"/>
                             <constraint firstItem="RDY-u2-I3J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YhF-uF-FTn"/>
                             <constraint firstItem="RDY-u2-I3J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="bY0-zd-ATT"/>
+                            <constraint firstItem="Jbo-BB-DYq" firstAttribute="top" secondItem="6N9-EV-KK6" secondAttribute="bottom" constant="41.5" id="ecq-rT-t7i"/>
                             <constraint firstItem="RDY-u2-I3J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gXh-MM-n2N"/>
                             <constraint firstItem="6N9-EV-KK6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mTb-c4-XIX"/>
                             <constraint firstItem="92L-SK-uAj" firstAttribute="top" secondItem="3QS-Yy-5NN" secondAttribute="bottom" constant="25" id="p2W-n2-yVg"/>
@@ -94,11 +104,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </scene>
     </scenes>
     <resources>
         <image name="imagen1" width="920" height="920"/>
+        <image name="pngwing.com-3" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
