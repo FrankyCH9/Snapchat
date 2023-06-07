@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482A84B32A30F93B00831653 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482A84B22A30F93B00831653 /* SnapsViewController.swift */; };
+		482A84B52A30FCB900831653 /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482A84B42A30FCB900831653 /* ImagenViewController.swift */; };
 		484B01692A27E8BB007B8819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 484B01682A27E8BB007B8819 /* GoogleService-Info.plist */; };
 		48D1E46A2A2787060047A094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1E4692A2787060047A094 /* AppDelegate.swift */; };
 		48D1E46C2A2787060047A094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1E46B2A2787060047A094 /* SceneDelegate.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		3272675437AAB27DF33BD70F /* Pods_Snapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482A84B22A30F93B00831653 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		482A84B42A30FCB900831653 /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
 		484B01682A27E8BB007B8819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48D1E4662A2787060047A094 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D1E4692A2787060047A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				48D1E46B2A2787060047A094 /* SceneDelegate.swift */,
 				48D1E46D2A2787060047A094 /* IniciarSesionViewController.swift */,
 				48D1E46F2A2787060047A094 /* Main.storyboard */,
+				482A84B42A30FCB900831653 /* ImagenViewController.swift */,
+				482A84B22A30F93B00831653 /* SnapsViewController.swift */,
 				48D1E4722A2787080047A094 /* Assets.xcassets */,
 				48D1E4742A2787080047A094 /* LaunchScreen.storyboard */,
 				48D1E4772A2787080047A094 /* Info.plist */,
@@ -231,8 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				482A84B32A30F93B00831653 /* SnapsViewController.swift in Sources */,
 				48D1E46E2A2787060047A094 /* IniciarSesionViewController.swift in Sources */,
 				48D1E46A2A2787060047A094 /* AppDelegate.swift in Sources */,
+				482A84B52A30FCB900831653 /* ImagenViewController.swift in Sources */,
 				48F984552A29286E00A350F5 /* LoginGoogle.swift in Sources */,
 				48D1E46C2A2787060047A094 /* SceneDelegate.swift in Sources */,
 			);
