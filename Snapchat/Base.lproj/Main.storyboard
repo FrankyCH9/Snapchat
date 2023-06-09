@@ -134,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="1655" y="124"/>
         </scene>
-        <!--Title-->
+        <!--Enviar Mensaje-->
         <scene sceneID="bgS-7g-kly">
             <objects>
                 <viewController id="YbZ-gj-UpJ" customClass="ImagenViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,6 +161,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Elegir Contacto"/>
+                                <connections>
+                                    <action selector="elegirContactoTapped:" destination="YbZ-gj-UpJ" eventType="touchUpInside" id="suc-h8-YHx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KSA-kC-Iwr"/>
@@ -177,7 +180,7 @@
                             <constraint firstItem="3Nh-T9-kIL" firstAttribute="centerX" secondItem="GSU-rI-zco" secondAttribute="centerX" id="taj-Iy-Jhk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="8CQ-m8-Bc7">
+                    <navigationItem key="navigationItem" title="Enviar Mensaje" id="8CQ-m8-Bc7">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="28W-lh-lfV">
                             <connections>
                                 <action selector="camaraTapped:" destination="YbZ-gj-UpJ" id="QHv-iX-dnw"/>
@@ -185,12 +188,46 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="UImageView" destination="3Nh-T9-kIL" id="LXG-IR-1vz"/>
+                        <outlet property="descripcionTextField" destination="mid-Ql-VeV" id="Bry-AT-c6s"/>
+                        <outlet property="elegirContactoBoton" destination="zar-r8-h8q" id="2NC-A8-UhG"/>
+                        <outlet property="imageView" destination="3Nh-T9-kIL" id="lGw-UD-jbr"/>
+                        <segue destination="9oa-Z5-lVn" kind="show" identifier="seleccionarContactoSegue" id="vUY-gu-mjs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VwJ-uf-bLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2492.753623188406" y="123.88392857142857"/>
+        </scene>
+        <!--Lista de Usuarios-->
+        <scene sceneID="bUj-Wb-yVG">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9oa-Z5-lVn" customClass="ElegirUsuarioViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gm0-KK-Rhn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mJg-nQ-y6f">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s8R-e1-Tca"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s8R-e1-Tca" firstAttribute="trailing" secondItem="mJg-nQ-y6f" secondAttribute="trailing" id="JiX-Od-4t8"/>
+                            <constraint firstItem="mJg-nQ-y6f" firstAttribute="top" secondItem="s8R-e1-Tca" secondAttribute="top" id="Jw7-G4-eIe"/>
+                            <constraint firstItem="s8R-e1-Tca" firstAttribute="bottom" secondItem="mJg-nQ-y6f" secondAttribute="bottom" id="uCD-Yc-JaR"/>
+                            <constraint firstItem="mJg-nQ-y6f" firstAttribute="leading" secondItem="s8R-e1-Tca" secondAttribute="leading" id="y1l-Vv-riu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lista de Usuarios" id="W1X-1N-dLj"/>
+                    <connections>
+                        <outlet property="listaUsuarios" destination="mJg-nQ-y6f" id="r7a-ia-2sf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPQ-4K-Qgb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3245" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N7G-Ie-Pxg">
