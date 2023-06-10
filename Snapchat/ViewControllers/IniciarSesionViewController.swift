@@ -31,6 +31,9 @@ class IniciarSesionViewController: UIViewController {
     }
     
     
+    @IBAction func crearUser(_ sender: Any) {
+        self.performSegue(withIdentifier: "crearSegue", sender: nil)
+    }
     
     
     @IBAction func gmailTapped(_ sender: Any) {
@@ -42,25 +45,16 @@ class IniciarSesionViewController: UIViewController {
             print("Intentando Iniciar Sesion")
             if error != nil{
                 print("Se presento el siguiente error: \(error)")
-                Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!,completion: {(user ,error) in
-                    print("Intentando crear un usuario")
-                    if error != nil{
-                        print("Se presento el siguiente error al crear el usuario: \(error)")
-                    }else {
-                        print("El usuario fue creado exitosamente")
-                        
-                        Database.database().reference().child("usuarios").child(user!.user.uid).child("email").setValue(user!.user.email)
-                        
-                        let alerta = UIAlertController(title: "creacion de usuario: ", message: "usuario \(self.emailTextField.text!) se creo correctamente", preferredStyle: .alert)
-                        let btnOK =  UIAlertAction(title: "aceptar", style: .default, handler:
-                            { (UIAlertAction) in
-                            self.performSegue(withIdentifier: "inisiarsesionsegue", sender: nil)
-                        })
-                        alerta.addAction(btnOK)
-                        self.present(alerta, animated: true,completion: nil)
-                        
-                    }
+                let alerta = UIAlertController(title: "creacion de usuario nuevo: ", message: "usuario \(self.emailTextField.text!) se creo correctamente", preferredStyle: .alert)
+                let btnOK =  UIAlertAction(title: "crear", style: .default, handler:
+                    { (UIAlertAction) in
+                    self.performSegue(withIdentifier: "crearSegue", sender: nil)
                 })
+                let btnCANCELAR =  UIAlertAction(title: "cancelar", style: .default, handler:nil
+                )
+                alerta.addAction(btnOK)
+                alerta.addAction(btnCANCELAR)
+                self.present(alerta, animated: true,completion: nil)
             }else {
                 print("Inicio de Sesion exitosa")
                 self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
